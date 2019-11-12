@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient
 const URL = 'mongodb://localhost/booksDB'
 //Adding
-//Adding
+//Changes from person 2
 let _db
 
 module.exports = {
