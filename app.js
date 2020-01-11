@@ -5,7 +5,8 @@ var bodyParser = require('body-parser'); // Reference to bodyparser
 var mongoose = require('mongoose');
 
 //STEP 2- Open a connection to mongoDB , Book API is the name of the DB in Mongo
-var db = mongoose.connect('mongodb://localhost/booksDB');
+//var db = mongoose.connect('mongodb://localhost/booksDB');
+var db = mongoose.connect('mongodb://localhost/retailmap');
 
 //STEP 3 - As mongoose converts documents in mongoDB to json(model), we need a model
 var Book = require('./models/bookModel')

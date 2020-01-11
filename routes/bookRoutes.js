@@ -7,6 +7,18 @@ var routes = function(Book){
     
     var bookRouter = express.Router();
        
+    bookRouter.route('/map')
+    .get(function(req, res){
+           mongoClient.connect().then((database) =>{
+            //console.log(database)
+                const myDB = database.db('retailmap')              
+                myDB.collection("productmap").find()
+                .then((result) =>{                    
+                     res.json(result)                        
+                })                       
+            })
+    })
+
     //ROUTING CODE FROM App.js TO BE PLACED HERE     
     bookRouter.route('/books')
     .post(function(req,res){
